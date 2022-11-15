@@ -1,0 +1,6 @@
+.env
+/dist
+/certs
+/logs
+/node_modules
+/.idea
