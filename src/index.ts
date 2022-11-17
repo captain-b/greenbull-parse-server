@@ -3,15 +3,13 @@ SetEnvVars();
 
 import {ParseServerMiddleware} from "./middleware";
 import {Server} from "./middleware/express";
-import {ParseDashboardMiddleware} from "./middleware/parse_dashboard";
 import * as https from "https";
 import * as fs from "fs";
 import path from "path";
+import {WhiteListMiddleware} from "./middleware/whitelist";
 
+WhiteListMiddleware(Server);
 ParseServerMiddleware(Server);
-if (process.env.NODE_ENV === 'local-dev') {
-    ParseDashboardMiddleware(Server);
-}
 
 const startHttps = () => {
     https.createServer({

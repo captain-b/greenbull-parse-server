@@ -1,6 +1,6 @@
 import {ParseServer} from "./parse_server";
-import {Express} from "express";
+import {Application} from "express";
 
-export const ParseServerMiddleware = (app: Express) => {
+export const ParseServerMiddleware = (app: Application) => {
     app.use('/greenbull', ParseServer);
 }

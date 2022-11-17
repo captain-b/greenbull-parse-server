@@ -6,11 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start:prod": "node dist/index.js",
-    "start:dev": "NODE_ENV=local-dev ts-node-dev --respawn src/index.ts",
-    "clinic:doctor": "tsc && NODE_ENV=local-dev clinic doctor -- node dist/cron.js",
-    "clinic:flame": "tsc && NODE_ENV=local-dev clinic flame -- node dist/cron.js",
-    "clinic:bubble": "tsc && NODE_ENV=local-dev clinic bubbleprof -- node dist/cron.js",
-    "test": "NODE_ENV=test jest --detectOpenHandles --watch --setupFiles dotenv/config"
+    "start:dev": "NODE_ENV=local-dev ts-node-dev --respawn src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +21,6 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "parse-dashboard": "^5.0.0",
     "parse-server": "^5.3.3"
   }
 }
