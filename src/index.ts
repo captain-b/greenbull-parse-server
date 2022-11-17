@@ -1,12 +1,12 @@
 import {SetEnvVars} from "./utils/dotenv";
 SetEnvVars();
 
-import {ParseServerMiddleware} from "./middleware";
 import {Server} from "./middleware/express";
 import * as https from "https";
 import * as fs from "fs";
 import path from "path";
 import {WhiteListMiddleware} from "./middleware/whitelist";
+import {ParseServerMiddleware} from "./middleware";
 
 WhiteListMiddleware(Server);
 ParseServerMiddleware(Server);
